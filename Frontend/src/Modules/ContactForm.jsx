@@ -29,7 +29,7 @@ export default function ContactForm() {
   
     try {
       // Send formState directly without wrapping it in another object
-      const response = await axios.post('http://localhost:3030/sendmail', formState);
+      const response = await axios.post('https://jimil-soni-personal-portfolio.onrender.com/sendmail', formState);
       
       // Handle response if needed
       console.log('Response:', response.data);
