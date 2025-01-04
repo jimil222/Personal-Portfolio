@@ -17,13 +17,14 @@ const ProjectDisplay = () => {
   };
 
   return (
-    <section className="max-w-screen-2xl px-6 sm:px-24 mx-auto relative pb-8 sm:pb-16 bg-[#111827]">
+    <section className="max-w-screen-2xl px-6 sm:px-24 mx-auto relative pb-8 sm:pb-16 bg-[#111827] overflow-x-hidden">
       <h2 className="text-3xl sm:text-[40px] relative z-10 font-semibold px-4 py-2 w-max mx-auto text-center text-[#42c6a1] sm:border-b-2 border-[#42c6a1]">
         Latest Works
       </h2>
 
       {/* First Project */}
       <motion.div
+      classname="w-full h-full"
         initial="hidden"
         whileInView="visible"
         variants={variantsRight}
@@ -65,6 +66,7 @@ const ProjectDisplay = () => {
       {/* Second Project */}
 
       <motion.div
+      classname="w-full h-full"
         initial="hidden"
         whileInView="visible"
         variants={variantsLeft}
@@ -106,6 +108,7 @@ const ProjectDisplay = () => {
 
       {/* Third Project */}
       <motion.div
+      classname="w-full h-full"
         initial="hidden"
         whileInView="visible"
         variants={variantsRight}

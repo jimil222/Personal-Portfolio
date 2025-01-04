@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { useInView, motion } from 'framer-motion';
-// import { LuSendHorizonal } from "react-icons/lu";
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; // Make sure to import the CSS for react-toastify
@@ -24,21 +23,19 @@ export default function ContactForm() {
     e.preventDefault();
     console.log('Form submitted:', formState);
   
-    // Reset form state
-    setFormState({ name: '', email: '', subject: '', message: '' });
-  
     try {
-      // Send formState directly without wrapping it in another object
-      const response = await axios.post('https://jimil-soni-personal-portfolio.onrender.com/sendmail', formState);
-      
-      // Handle response if needed
-      console.log('Response:', response.data);
-
-      // Show success toast message
-      toast.success('Email sent successfully!', {
-        autoClose: 2000,
-        theme:"dark"
-      });
+      // Trigger the toast and send the request
+      await toast.promise(
+        axios.post('https://jimil-soni-personal-portfolio.onrender.com/sendmail', formState),
+        {
+          pending: 'Please hold on..',
+          success: 'Form submitted successfully!',
+          error: 'There was an error sending your message. Please try again.',
+        }
+      );
+  
+      // Reset form state only after the successful completion of the request
+      setFormState({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
       console.error('Error sending email:', error.response ? error.response.data : error.message);
       toast.error('Error sending email. Please try again.', {
@@ -47,6 +44,7 @@ export default function ContactForm() {
       });
     }
   };
+  
 
   const divRef = useRef(null);
   const isInView = useInView(divRef, { once: true, threshold: 0.2 });
@@ -166,15 +164,14 @@ export default function ContactForm() {
             type="submit"
             className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-gray-900 bg-emerald-500 hover:bg-emerald-600 focus:outline-none focus:ring-2 duration-300 focus:ring-offset-2 focus:ring-emerald-500"
           >
-            {/* <LuSendHorizonal className="w-5 h-5 mr-2"/> */}
+            
             Send Message
           </button>
-          <ToastContainer position="top-right" limit={1} />
+          <ToastContainer position="top-right" limit={1} theme='dark' />
         </form>
       </div>
     </div>
   </div>
-  <ToastContainer position="top-right" limit={1} />
 </motion.div>
 
   );

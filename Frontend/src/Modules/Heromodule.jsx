@@ -13,7 +13,6 @@ import Twitterlogo from '../Components/Twitterlogo';
 import Instagramlogo from '../Components/Instagramlogo';
 import Maillogo from '../Components/Maillogo';
 import Githublogo from '../Components/Githublogo';
-import Popup from 'reactjs-popup';
 import { useState } from 'react';
 import ParticlesComponent from '../Components/ParticlesComponent';
 import { DiMongodb, DiReact, DiNodejsSmall } from "react-icons/di"
@@ -90,8 +89,8 @@ const Heromodule = () => {
             <Latestworks onClick={scrollToProjectDisplay} />
           </div>
         </section>
-        <Popup open={showpopups} position="center" onClose={() => setshowpopups(false)} id="popupclass'">
-          <div className="popupdiv fixed inset-0 bg-opacity-50 flex items-center justify-center p-4 z-50">
+          {
+            showpopups&&<div className="popupdiv fixed inset-0 bg-opacity-50 flex items-center justify-center p-4 z-50">
             <div className="w-full max-w-lg bg-gray-800 text-white rounded-lg shadow-lg ">
               <div className="flex flex-row items-center justify-between space-y-0 pb-2 border-b border-gray-700 p-4">
                 <h2 className="text-xl sm:text-2xl font-bold">About Me</h2>
@@ -152,7 +151,7 @@ const Heromodule = () => {
               </div>
             </div>
           </div>
-        </Popup>
+          }
       </div>
       <div ref={projectDisplayRef} className="min-h-screen w-screen m-0 p-0">
         <ProjectDisplay />
