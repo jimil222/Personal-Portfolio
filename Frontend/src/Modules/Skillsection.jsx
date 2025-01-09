@@ -86,7 +86,7 @@ export default function SkillsSection() {
   }
 
   return (
-    <section ref={sectionRef} className="py-16 bg-gradient-to-b from-gray-900 to-gray-800 overflow-hidden relative h-screen">
+    <section ref={sectionRef} className="py-16 bg-gradient-to-b from-gray-900 to-gray-800 overflow-hidden relative min-h-screen">
       <div className="container mx-auto px-4 relative">
         <motion.h2
           className="text-4xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500"
