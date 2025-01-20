@@ -42,21 +42,22 @@ const Heromodule = () => {
         <section className='flex flex-col justify-between h-screen'>
           <header className='flex justify-between w-full px-4 mt-4 max-w-screen-xl mx-auto'>
             <Logo />
-            <div className="relative group cursor-pointer overflow-hidden">
+            <div className="relative group cursor-pointer overflow-hidden w-full flex  items-center justify-end">
               <a href="https://drive.google.com/file/d/1-XvlYSZyoXYSH4t18vyHKnRzyJ3ONgmk/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <BsDownload className="z-10 text-2xl cursor-pointer" />
               </a>
-              <p className="absolute bottom-[-15px] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 group-focus:opacity-100 bg-white text-black text-xs sm:text-sm py-1 px-3 rounded-lg shadow-lg transition-opacity duration-200 whitespace-nowrap">
+              <p className="absolute bottom-0 right-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 bg-white text-black text-xs sm:text-sm py-1 px-3 rounded-lg shadow-lg transition-opacity duration-200 z-10">
                 <a href="https://drive.google.com/file/d/1-XvlYSZyoXYSH4t18vyHKnRzyJ3ONgmk/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                  Download CV</a>
+                  Download CV
+                </a>
               </p>
             </div>
+
 
 
           </header>
           <div className='flex -mt-10 relative'>
             <div className='w-full h-full max-w-5xl mx-auto overflow-hidden'>
-              {/* Text section */}
               <div className="relative">
                 <div className="animate__animated animate__bounceInDown">
 
