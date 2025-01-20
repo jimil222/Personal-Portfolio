@@ -20,6 +20,8 @@ import { SiExpress } from "react-icons/si"
 import 'animate.css';
 import SkillsSection from './Skillsection';
 import ProjectDisplay from './ProjectDisplay';
+import { BsDownload } from "react-icons/bs"
+import { FiDownload } from "react-icons/fi";
 import ContactForm from './ContactForm';
 
 const Heromodule = () => {
@@ -40,6 +42,17 @@ const Heromodule = () => {
         <section className='flex flex-col justify-between h-screen'>
           <header className='flex justify-between w-full px-4 mt-4 max-w-screen-xl mx-auto'>
             <Logo />
+            <div className="relative group cursor-pointer">
+              <a href="https://drive.google.com/file/d/1-XvlYSZyoXYSH4t18vyHKnRzyJ3ONgmk/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <BsDownload className="z-10 text-2xl cursor-pointer" />
+              </a>
+              <p className="absolute bottom-[-15px] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 group-focus:opacity-100 bg-white text-black text-xs sm:text-sm py-1 px-3 rounded-lg shadow-lg transition-opacity duration-200 whitespace-nowrap">
+                <a href="https://drive.google.com/file/d/1-XvlYSZyoXYSH4t18vyHKnRzyJ3ONgmk/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                  Download CV</a>
+              </p>
+            </div>
+
+
           </header>
           <div className='flex -mt-10 relative'>
             <div className='w-full h-full max-w-5xl mx-auto overflow-hidden'>
@@ -89,8 +102,8 @@ const Heromodule = () => {
             <Latestworks onClick={scrollToProjectDisplay} />
           </div>
         </section>
-          {
-            showpopups&&<div className="popupdiv fixed inset-0 bg-opacity-50 flex items-center justify-center p-4 z-50">
+        {
+          showpopups && <div className="popupdiv fixed inset-0 bg-opacity-50 flex items-center justify-center p-4 z-50">
             <div className="w-full max-w-lg bg-gray-800 text-white rounded-lg shadow-lg ">
               <div className="flex flex-row items-center justify-between space-y-0 pb-2 border-b border-gray-700 p-4">
                 <h2 className="text-xl sm:text-2xl font-bold">About Me</h2>
@@ -151,7 +164,7 @@ const Heromodule = () => {
               </div>
             </div>
           </div>
-          }
+        }
       </div>
       <div ref={projectDisplayRef} className="min-h-screen w-screen m-0 p-0">
         <ProjectDisplay />
