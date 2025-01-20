@@ -42,7 +42,7 @@ const Heromodule = () => {
         <section className='flex flex-col justify-between h-screen'>
           <header className='flex justify-between w-full px-4 mt-4 max-w-screen-xl mx-auto'>
             <Logo />
-            <div className="relative group cursor-pointer">
+            <div className="relative group cursor-pointer overflow-hidden">
               <a href="https://drive.google.com/file/d/1-XvlYSZyoXYSH4t18vyHKnRzyJ3ONgmk/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <BsDownload className="z-10 text-2xl cursor-pointer" />
               </a>
