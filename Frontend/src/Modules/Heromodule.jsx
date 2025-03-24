@@ -42,16 +42,24 @@ const Heromodule = () => {
         <section className='flex flex-col justify-between h-screen'>
           <header className='flex justify-between w-full px-4 mt-4 max-w-screen-xl mx-auto'>
             <Logo />
-            <div className="relative group cursor-pointer overflow-hidden w-full flex  items-center justify-end">
-              <a href="https://drive.google.com/file/d/1-XvlYSZyoXYSH4t18vyHKnRzyJ3ONgmk/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                <BsDownload className="z-10 text-2xl cursor-pointer" />
-              </a>
-              <p className="absolute bottom-0 right-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 bg-white text-black text-xs sm:text-sm py-1 px-3 rounded-lg shadow-lg transition-opacity duration-200 z-10">
-                <a href="https://drive.google.com/file/d/1-XvlYSZyoXYSH4t18vyHKnRzyJ3ONgmk/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <div className="relative group cursor-pointer overflow-hidden w-[200px] h-[50px] flex flex-row items-center lg:flex-col transition-all duration-700">
+              <a
+                href="https://drive.google.com/file/d/1-XvlYSZyoXYSH4t18vyHKnRzyJ3ONgmk/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full h-full flex items-center justify-center relative"
+              >
+                <BsDownload className="text-xl lg:text-2xl text-white 
+      lg:transition-transform lg:duration-700 lg:group-hover:-translate-x-[300%]" />
+
+                <p className="text-white text-base lg:text-md font-semibold ml-2 lg:absolute lg:right-0 lg:top-0 lg:w-full lg:h-full lg:flex lg:items-center lg:justify-center 
+      lg:transition-transform lg:duration-700 lg:translate-x-full lg:group-hover:translate-x-0">
                   Download CV
-                </a>
-              </p>
+                </p>
+              </a>
             </div>
+
+
 
 
 
