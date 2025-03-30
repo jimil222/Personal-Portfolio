@@ -172,7 +172,7 @@ const ProjectDisplay = () => {
           </ul>
         </div>
 
-        <a href="https://github.com/jimil222/AI-trip-Planner" className="order-1 sm:order-2 flex w-full relative justify-center sm:justify-start" target='_blank'>
+        <a href="https://github.com/jimil222/AI-Writer-Studio" className="order-1 sm:order-2 flex w-full relative justify-center sm:justify-start" target='_blank'>
           <div className="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200 sm:ml-auto">
             <img
               className="max-w-[400px] w-full relative z-10 drop-shadow-[0_0px_60px_rgba(66,198,161)]"
