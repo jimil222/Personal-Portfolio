@@ -2,6 +2,7 @@ import React from 'react';
 import Project1 from '../assets/bg removal img.png';
 import Project2 from '../assets/Project2.png';
 import Project3 from '../assets/Project3.png';
+import Project4 from '../assets/Project4.png';
 import { motion } from 'framer-motion';
 
 const ProjectDisplay = () => {
@@ -48,8 +49,8 @@ const ProjectDisplay = () => {
         </a>
 
         <div className="w-full text-center mt-6 sm:mt-0">
-          <h3 className="text-[#459bd5] font-bold text-2xl sm:text-4xl mb-2">Bg Removal</h3>
-          <span className="text-[#459bd5] italic text-base md:text-lg">(Advanced Background Removal Website)</span>
+          <h3 className="text-[#db68d7] font-bold text-2xl sm:text-4xl mb-2">Bg Removal</h3>
+          <span className="text-[#db68d7] italic text-base md:text-lg">(Advanced Background Removal Website)</span>
           <p className="text-justify text-sm sm:text-base mt-4 text-white leading-relaxed">
             Experience the power of a feature-rich <strong>Background Removal Website</strong> built using the MERN stack (MongoDB, Express.js, React.js, Node.js). This project integrates advanced image processing capabilities through a securely implemented third-party API, ensuring precise background removal with optimal performance and data confidentiality. Demonstrating expertise in scalable full-stack development, secure API integration, and user-centric design, this application delivers an intuitive and seamless user experience.
           </p>
@@ -132,8 +133,8 @@ const ProjectDisplay = () => {
         </a>
 
         <div className="w-full text-center mt-6 sm:mt-0">
-          <h3 className="text-[#459bd5] font-bold text-2xl sm:text-4xl mb-2">Hotel Room Booking System</h3>
-          <span className="text-[#459bd5] italic text-base md:text-lg">(Hotel Room Booking Website)</span>
+          <h3 className="text-[#e8a975] font-bold text-2xl sm:text-4xl mb-2">Hotel Room Booking System</h3>
+          <span className="text-[#e8a975] italic text-base md:text-lg">(Hotel Room Booking Website)</span>
           <p className="text-justify text-sm sm:text-base mt-4 text-white leading-relaxed">
             Developed a responsive and user-friendly landing page to navigate a room booking list featuring multiple room options. Integrated a seamless room booking system where users can book rooms and receive confirmation emails using Nodemailer. Implemented robust admin functionalities for adding or removing rooms, marking payments as completed, and managing user checkouts.
           </p>
@@ -146,6 +147,46 @@ const ProjectDisplay = () => {
             <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#MYSQL</li>
           </ul>
         </div>
+      </motion.div>
+
+      <motion.div
+      classname="w-full h-full"
+        initial="hidden"
+        whileInView="visible"
+        variants={variantsLeft}
+        className="flex flex-col sm:flex-row gap-4 mt-12 sm:gap-[80px] items-center sm:mt-20 relative"
+        viewport={{ once: true }}
+      >
+        <div className="order-2 sm:order-1 w-full text-center">
+          <h3 className="text-[#50a4c2] font-bold text-2xl sm:text-4xl mb-2">AI Writer Studio</h3>
+          <span className="text-[#50a4c2] italic text-base md:text-lg">(A Content Generator WebApp)</span>
+          <p className="text-justify text-sm sm:text-base mt-4 text-white leading-relaxed">
+          Generate high-quality content effortlessly with <strong>AI Writer Studio</strong>. Built with a sleek and responsive interface using <strong>Next.js</strong> and <strong>Tailwind CSS</strong>, this platform offers AI-powered writing tools for blogs, SEO, and content creation. It integrates the <strong>Gemini API</strong> for text generation, utilizes <strong>Neon PostgreSQL</strong> for structured data management, and features a credit-based system for usage tracking and membership access.
+          </p>
+
+          <ul className="flex flex-wrap gap-3 mt-6 justify-center">
+            <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#NextJS</li>
+            <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#TailwindCSS</li>
+            <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#NeonPostgreSQL</li>
+            <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#GeminiAPI</li>
+          </ul>
+        </div>
+
+        <a href="https://github.com/jimil222/AI-trip-Planner" className="order-1 sm:order-2 flex w-full relative justify-center sm:justify-start" target='_blank'>
+          <div className="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200 sm:ml-auto">
+            <img
+              className="max-w-[400px] w-full relative z-10 drop-shadow-[0_0px_60px_rgba(66,198,161)]"
+              src={Project4}
+              alt="AI trip planner"
+            />
+            {/* Tooltip with message icon style */}
+            <div className="absolute top-[-50px] sm:top-[-60px] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-white text-black text-xs sm:text-sm py-2 px-4 rounded-lg shadow-lg transition-opacity duration-200">
+              <span>Github Repository Link</span>
+              {/* Tooltip arrow */}
+              <div className="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white rotate-45"></div>
+            </div>
+          </div>
+        </a>
       </motion.div>
 
     </section>
