@@ -53,7 +53,5 @@ Follow these steps to set up the project locally:
 - **React.js** for the frontend framework.
 - **Vite** for fast and optimized development.
 - **Tailwind CSS** for styling the UI.
-- **Nodemailer** for handling email functionality.
-- **Express.js** for backend routing and API handling.
 
 
