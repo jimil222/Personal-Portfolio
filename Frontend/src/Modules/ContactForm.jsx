@@ -2,8 +2,8 @@ import React, { useState, useRef } from 'react';
 import { useInView, motion } from 'framer-motion';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // Make sure to import the CSS for react-toastify
-
+import { RiLoader4Fill } from "react-icons/ri";
+import 'react-toastify/dist/ReactToastify.css';
 export default function ContactForm() {
   const [formState, setFormState] = useState({
     name: '',
@@ -12,6 +12,7 @@ export default function ContactForm() {
     message: ''
   });
 
+  const [formStatus, setFormStatus] = useState("idle");
   const handleChange = (e) => {
     setFormState({
       ...formState,
@@ -21,31 +22,35 @@ export default function ContactForm() {
 
 
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setFormStatus("loading");
 
-  const formData = new FormData(e.target);
-  formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
+    const formData = new FormData(e.target);
+    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
 
-  try {
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    const data = await response.json();
-
-    if (data.success) {
-      toast.success("Form submitted successfully!");
-      setFormState({ name: "", email: "", subject: "", message: "" });
-    } else {
-      toast.error(data.message || "Something went wrong.");
+      const data = await response.json();
+      if (data.success) {
+        setFormStatus("success");
+        toast.success("Form submitted successfully!");
+        setFormState({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setFormStatus("error");
+        toast.error(data.message || "Something went wrong.");
+      }
+    } catch (error) {
+      setFormStatus("error");
+      toast.error("Error sending email. Please try again.");
+      console.error("Web3Forms Error:", error);
     }
-  } catch (error) {
-    toast.error("Error sending email. Please try again.");
-    console.error("Web3Forms Error:", error);
-  }
-};
+  };
+
 
 
 
@@ -166,11 +171,19 @@ const handleSubmit = async (e) => {
 
               <button
                 type="submit"
-                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-gray-900 bg-emerald-500 hover:bg-emerald-600 focus:outline-none focus:ring-2 duration-300 focus:ring-offset-2 focus:ring-emerald-500"
+                disabled={formStatus === "loading"}
+                className="w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-gray-900 bg-emerald-500 hover:bg-emerald-600 focus:outline-none focus:ring-2 duration-300 focus:ring-offset-2 focus:ring-emerald-500"
               >
-
-                Send Message
+                {formStatus === "loading" ? (
+                  <>
+                    Sending <RiLoader4Fill className="animate-spin" />
+                  </>
+                ) : (
+                  "Send Message"
+                )}
               </button>
+
+
               <ToastContainer position="top-right" limit={1} theme='dark' />
             </form>
           </div>
