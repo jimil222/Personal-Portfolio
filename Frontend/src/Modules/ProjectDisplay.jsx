@@ -1,8 +1,9 @@
 import React from 'react';
-import Project1 from '../assets/bg removal img.png';
+import Project1 from '../assets/Project5.png';
 import Project2 from '../assets/Project2.png';
 import Project3 from '../assets/Project3.png';
 import Project4 from '../assets/Project4.png';
+import Project5 from '../assets/bg removal img.png';
 import { motion } from 'framer-motion';
 
 const ProjectDisplay = () => {
@@ -32,7 +33,7 @@ const ProjectDisplay = () => {
         className="flex flex-col sm:flex-row mt-8 sm:gap-[80px] items-center sm:mt-20 relative"
         viewport={{ once: true }}
       >
-        <a href="https://github.com/jimil222/Bg-Removal-Site" className="flex w-full relative justify-center sm:justify-start" target='_blank'>
+        <a href="https://github.com/jimil222/Ingreasy.git" className="flex w-full relative justify-center sm:justify-start" target='_blank'>
           <div className="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200">
             <img
               className="max-w-[400px] w-full mr-auto relative z-10 drop-shadow-[0_0px_60px_rgb(66,198,161)]"
@@ -49,10 +50,10 @@ const ProjectDisplay = () => {
         </a>
 
         <div className="w-full text-center mt-6 sm:mt-0">
-          <h3 className="text-[#db68d7] font-bold text-2xl sm:text-4xl mb-2">Bg Removal</h3>
-          <span className="text-[#db68d7] italic text-base md:text-lg">(Advanced Background Removal Website)</span>
+          <h3 className="text-green-300 font-bold text-2xl sm:text-4xl mb-2">Ingreasy</h3>
+          <span className="text-green-200 italic text-base md:text-lg">(AI recipe generator webapp)</span>
           <p className="text-justify text-sm sm:text-base mt-4 text-white leading-relaxed">
-            Experience the power of a feature-rich <strong>Background Removal Website</strong> built using the MERN stack (MongoDB, Express.js, React.js, Node.js). This project integrates advanced image processing capabilities through a securely implemented third-party API, ensuring precise background removal with optimal performance and data confidentiality. Demonstrating expertise in scalable full-stack development, secure API integration, and user-centric design, this application delivers an intuitive and seamless user experience.
+            Experience the power of a feature-rich <strong>Recipe generator webapp</strong> built using the MERN stack (MongoDB, Express.js, React.js, Node.js). This project allows users to upload labeled grocery items and generates three delicious recipes based on the extracted ingredients. It utilizes the OCR.space API for text extraction and the Gemini API for recipe generation.
           </p>
           <ul className="flex flex-wrap gap-3 mt-6 justify-center">
             <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#REACT JS</li>
@@ -75,26 +76,25 @@ const ProjectDisplay = () => {
         viewport={{ once: true }}
       >
         <div className="order-2 sm:order-1 w-full text-center">
-          <h3 className="text-[#ffe578] font-bold text-2xl sm:text-4xl mb-2">AI Trip Planner</h3>
-          <span className="text-[#ffe578] italic text-base md:text-lg">(Your Personalized Trip Planner)</span>
+          <h3 className="text-[#50a4c2] font-bold text-2xl sm:text-4xl mb-2">AI Writer Studio</h3>
+          <span className="text-[#50a4c2] italic text-base md:text-lg">(A Content Generator WebApp)</span>
           <p className="text-justify text-sm sm:text-base mt-4 text-white leading-relaxed">
-            Plan your perfect trip with ease using <strong>AI Trip Planner</strong>. Built with a sleek and responsive interface using <strong>React.js</strong> and <strong>Tailwind CSS</strong>, this project helps users plan personalized trips by providing location suggestions, navigation links, and hotel recommendations. It reflects my ability to integrate APIs and create seamless, interactive web applications for an enhanced user experience.
+          Generate high-quality content effortlessly with <strong>AI Writer Studio</strong>. Built with a sleek and responsive interface using <strong>Next.js</strong> and <strong>Tailwind CSS</strong>, this platform offers AI-powered writing tools for blogs, SEO, and content creation. It integrates the <strong>Gemini API</strong> for text generation, utilizes <strong>Neon PostgreSQL</strong> for structured data management, and features a credit-based system for usage tracking and membership access.
           </p>
 
           <ul className="flex flex-wrap gap-3 mt-6 justify-center">
-            <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#ReactJS</li>
+            <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#NextJS</li>
             <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#TailwindCSS</li>
-            <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#Firebase</li>
-            <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#GoogleAPIs</li>
+            <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#NeonPostgreSQL</li>
             <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#GeminiAPI</li>
           </ul>
         </div>
 
-        <a href="https://github.com/jimil222/AI-trip-Planner" className="order-1 sm:order-2 flex w-full relative justify-center sm:justify-start" target='_blank'>
+        <a href="https://github.com/jimil222/AI-Writer-Studio" className="order-1 sm:order-2 flex w-full relative justify-center sm:justify-start" target='_blank'>
           <div className="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200 sm:ml-auto">
             <img
               className="max-w-[400px] w-full relative z-10 drop-shadow-[0_0px_60px_rgba(66,198,161)]"
-              src={Project2}
+              src={Project4}
               alt="AI trip planner"
             />
             {/* Tooltip with message icon style */}
@@ -149,6 +149,7 @@ const ProjectDisplay = () => {
         </div>
       </motion.div>
 
+    {/* Fourth Project */}
       <motion.div
       classname="w-full h-full"
         initial="hidden"
@@ -158,25 +159,26 @@ const ProjectDisplay = () => {
         viewport={{ once: true }}
       >
         <div className="order-2 sm:order-1 w-full text-center">
-          <h3 className="text-[#50a4c2] font-bold text-2xl sm:text-4xl mb-2">AI Writer Studio</h3>
-          <span className="text-[#50a4c2] italic text-base md:text-lg">(A Content Generator WebApp)</span>
+          <h3 className="text-[#ffe578] font-bold text-2xl sm:text-4xl mb-2">AI Trip Planner</h3>
+          <span className="text-[#ffe578] italic text-base md:text-lg">(Your Personalized Trip Planner)</span>
           <p className="text-justify text-sm sm:text-base mt-4 text-white leading-relaxed">
-          Generate high-quality content effortlessly with <strong>AI Writer Studio</strong>. Built with a sleek and responsive interface using <strong>Next.js</strong> and <strong>Tailwind CSS</strong>, this platform offers AI-powered writing tools for blogs, SEO, and content creation. It integrates the <strong>Gemini API</strong> for text generation, utilizes <strong>Neon PostgreSQL</strong> for structured data management, and features a credit-based system for usage tracking and membership access.
+            Plan your perfect trip with ease using <strong>AI Trip Planner</strong>. Built with a sleek and responsive interface using <strong>React.js</strong> and <strong>Tailwind CSS</strong>, this project helps users plan personalized trips by providing location suggestions, navigation links, and hotel recommendations. It reflects my ability to integrate APIs and create seamless, interactive web applications for an enhanced user experience.
           </p>
 
           <ul className="flex flex-wrap gap-3 mt-6 justify-center">
-            <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#NextJS</li>
+            <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#ReactJS</li>
             <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#TailwindCSS</li>
-            <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#NeonPostgreSQL</li>
+            <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#Firebase</li>
+            <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#GoogleAPIs</li>
             <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#GeminiAPI</li>
           </ul>
         </div>
 
-        <a href="https://github.com/jimil222/AI-Writer-Studio" className="order-1 sm:order-2 flex w-full relative justify-center sm:justify-start" target='_blank'>
+        <a href="https://github.com/jimil222/AI-trip-Planner" className="order-1 sm:order-2 flex w-full relative justify-center sm:justify-start" target='_blank'>
           <div className="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200 sm:ml-auto">
             <img
               className="max-w-[400px] w-full relative z-10 drop-shadow-[0_0px_60px_rgba(66,198,161)]"
-              src={Project4}
+              src={Project2}
               alt="AI trip planner"
             />
             {/* Tooltip with message icon style */}
@@ -188,6 +190,47 @@ const ProjectDisplay = () => {
           </div>
         </a>
       </motion.div>
+
+      {/* Fifth project */}
+            <motion.div
+      classname="w-full h-full"
+        initial="hidden"
+        whileInView="visible"
+        variants={variantsRight}
+        className="flex flex-col sm:flex-row mt-8 sm:gap-[80px] items-center sm:mt-20 relative"
+        viewport={{ once: true }}
+      >
+        <a href="https://github.com/jimil222/Bg-Removal-Site" className="flex w-full relative justify-center sm:justify-start" target='_blank'>
+          <div className="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200">
+            <img
+              className="max-w-[400px] w-full mr-auto relative z-10 drop-shadow-[0_0px_60px_rgb(66,198,161)]"
+              src={Project5}
+              alt="Bg removal"
+            />
+            {/* Tooltip with message icon style */}
+            <div className="absolute top-[-50px] sm:top-[-60px] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-white text-black text-xs sm:text-sm py-2 px-4 rounded-lg shadow-lg transition-opacity duration-200">
+              <span>Github Repository Link</span>
+              {/* Tooltip arrow */}
+              <div className="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white rotate-45"></div>
+            </div>
+          </div>
+        </a>
+
+        <div className="w-full text-center mt-6 sm:mt-0">
+          <h3 className="text-[#db68d7] font-bold text-2xl sm:text-4xl mb-2">Bg Removal</h3>
+          <span className="text-[#db68d7] italic text-base md:text-lg">(Advanced Background Removal Website)</span>
+          <p className="text-justify text-sm sm:text-base mt-4 text-white leading-relaxed">
+            Experience the power of a feature-rich <strong>Background Removal Website</strong> built using the MERN stack (MongoDB, Express.js, React.js, Node.js). This project integrates advanced image processing capabilities through a securely implemented third-party API, ensuring precise background removal with optimal performance and data confidentiality. Demonstrating expertise in scalable full-stack development, secure API integration, and user-centric design, this application delivers an intuitive and seamless user experience.
+          </p>
+          <ul className="flex flex-wrap gap-3 mt-6 justify-center">
+            <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#REACT JS</li>
+            <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#TAILWIND CSS</li>
+            <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#NODE JS</li>
+            <li className="border rounded-full border-[#999] px-4 py-2 text-sm md:text-base text-white">#MONGODB</li>
+          </ul>
+        </div>
+      </motion.div>
+
 
     </section>
   );
