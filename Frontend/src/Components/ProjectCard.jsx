@@ -25,17 +25,18 @@ const ProjectCard = ({
       whileInView="visible"
       variants={variants}
       viewport={{ once: true }}
-      className={`flex flex-col sm:flex-row ${
-        direction === "left" ? "sm:flex-row-reverse" : ""
-      } gap-4 mt-12 sm:gap-[80px] items-center sm:mt-20 relative`}
+      className={`flex flex-col sm:flex-row ${direction === "left" ? "sm:flex-row-reverse" : ""
+        } gap-4 mt-12 sm:gap-[80px] items-center sm:mt-20 relative`}
     >
       <div className="flex w-full relative justify-center">
         <div className="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200">
           <img
-            className={`max-w-[400px] w-full relative z-10 drop-shadow-[0_0px_60px_${dropShadowColor}]`}
+            className="max-w-[400px] w-full relative z-10"
+            style={{ filter: `drop-shadow(0 0 60px ${dropShadowColor})` }}
             src={image || "/placeholder.svg"}
             alt={title}
           />
+
           {/* Tooltip with GitHub | Live links */}
           <div className="absolute top-[-60px] sm:top-[-70px] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-white text-black text-xs sm:text-sm py-2 px-4 rounded-lg shadow-lg transition-opacity duration-200 flex items-center gap-3 z-20">
             {repoLink && (
