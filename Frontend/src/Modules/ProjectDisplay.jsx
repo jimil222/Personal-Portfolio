@@ -30,7 +30,7 @@ const ProjectDisplayWithVSCode = () => {
         subtitle="(A Content Generator WebApp)"
         description="Generate high-quality content effortlessly with AI Writer Studio. Built with Next.js and Tailwind CSS, this platform offers AI-powered writing tools for blogs, SEO, and content creation. It integrates the Gemini API for text generation, utilizes Neon PostgreSQL for structured data management, and features a credit-based system for usage tracking and membership access."
         techStack={["NextJS", "TailwindCSS", "NeonPostgreSQL", "GeminiAPI"]}
-        image={Project2}
+        image={Project4}
         repoLink="https://github.com/jimil222/AI-Writer-Studio"
         direction="left"
         titleColor="text-[#50a4c2]"
@@ -54,7 +54,7 @@ const ProjectDisplayWithVSCode = () => {
         subtitle="(Your Personalized Trip Planner)"
         description="Plan your perfect trip with ease using AI Trip Planner. Built with React.js and Tailwind CSS, this project helps users plan personalized trips by providing location suggestions, navigation links, and hotel recommendations. It reflects my ability to integrate APIs and create seamless, interactive web applications for an enhanced user experience."
         techStack={["ReactJS", "TailwindCSS", "Firebase", "GoogleAPIs", "GeminiAPI"]}
-        image={Project4}
+        image={Project2}
         repoLink="https://github.com/jimil222/AI-trip-Planner"
         direction="left"
         titleColor="text-[#ffe578]"
