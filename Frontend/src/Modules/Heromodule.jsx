@@ -44,7 +44,7 @@ const Heromodule = () => {
             <Logo />
             <div className="relative group cursor-pointer overflow-hidden w-[200px] h-[50px] flex flex-row items-center lg:flex-col transition-all duration-700">
               <a
-                href="https://drive.google.com/file/d/1-XvlYSZyoXYSH4t18vyHKnRzyJ3ONgmk/view?usp=sharing"
+                href="https://drive.google.com/file/d/1L9DvW38xEH19r8MFiRa1Hkd6szjY8rNR/view?usp=drivesdk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full h-full flex items-center justify-center relative"
