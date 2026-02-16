@@ -1,4 +1,5 @@
 import ProjectCardWithVSCode from "../Components/ProjectCard.jsx"
+import offery from "../assets/Offery.png"
 import Project1 from "../assets/Project5.png"
 import Project2 from "../assets/Project2.png"
 import Project3 from "../assets/Project3.png"
@@ -11,6 +12,29 @@ const ProjectDisplayWithVSCode = () => {
       <h2 className="text-3xl sm:text-[40px] relative z-10 font-semibold px-4 py-2 w-max mx-auto text-center text-[#42c6a1] sm:border-b-2 border-[#42c6a1]">
         Latest Works
       </h2>
+
+      <ProjectCardWithVSCode
+        title="Offery"
+        subtitle="(Automatic Price Tracking Web App)"
+        description="A full-stack price tracking system built with Next.js 14 (App Router) that monitors product prices across multiple e-commerce platforms for real-time comparison. Integrated Firecrawl for automated product data extraction and cron jobs for scheduled background price checks. Configured Resend for instant price-drop email alerts and managed authentication and database operations with Supabase. Designed a fully responsive UI using Tailwind CSS and Shadcn UI."
+        techStack={[
+          "NEXT JS 14",
+          "APP ROUTER",
+          "TAILWIND CSS",
+          "SHADCN UI",
+          "SUPABASE",
+          "FIRECRAWL",
+          "RESEND",
+          "CRON JOBS"
+        ]}
+        image={offery}   
+        repoLink="https://github.com/jimil222/offery.git"  
+        liveLink="https://offery.vercel.app"          
+        direction="left"
+        titleColor="text-green-300"
+        dropShadowColor="rgb(66,198,161)"
+      />
+
 
       <ProjectCardWithVSCode
         title="Ingreasy"
