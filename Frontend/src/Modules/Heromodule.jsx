@@ -23,6 +23,8 @@ import ProjectDisplay from './ProjectDisplay';
 import { BsDownload } from "react-icons/bs"
 import { FiDownload } from "react-icons/fi";
 import ContactForm from './ContactForm';
+import EducationSection from './EducationSection';
+import ExperienceSection from './ExperienceSection';
 
 const Heromodule = () => {
   const [showpopups, setshowpopups] = useState(false)
@@ -182,6 +184,14 @@ const Heromodule = () => {
 
       <div className="min-h-screen w-screen m-0 p-0 ">
         <SkillsSection />
+      </div>
+
+      <div className="min-h-screen w-screen m-0 p-0 ">
+        <ExperienceSection />
+      </div>
+
+      <div className="min-h-screen w-screen m-0 p-0 ">
+        <EducationSection />
       </div>
 
       <div className="min-h-screen w-screen m-0 p-0 ">
