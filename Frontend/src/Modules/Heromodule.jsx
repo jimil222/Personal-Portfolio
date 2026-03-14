@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import '../styles/reset.css';
 import logo from '../assets/logo.png'
 import pic from '../assets/Profilepic.png'
 import Aboutme from '../Components/Aboutme';
