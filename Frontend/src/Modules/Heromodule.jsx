@@ -65,7 +65,7 @@ const Heromodule = () => {
 
           {/* Main hero content */}
           <div className='flex -mt-10 relative'>
-            <div className='w-full h-full max-w-5xl mx-auto overflow-hidden'>
+            <div className='w-full h-full max-w-5xl mx-auto overflow-hidden pr-16 sm:pr-20'>
               <div className="relative">
                 {/* Name with staggered slide-up reveal */}
                 <div className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
@@ -114,7 +114,7 @@ const Heromodule = () => {
             </div>
 
             {/* Social links with staggered entrance */}
-            <ul className="social-stagger ml-auto space-y-6 cursor-pointer absolute right-8 border border-white/10 bg-white/5 backdrop-blur-md p-3 rounded-xl max-w-full">
+            <ul className="social-stagger ml-auto space-y-6 cursor-pointer absolute right-6 border border-white/10 bg-white/5 backdrop-blur-md p-3 rounded-xl max-w-full">
               <li className="animate-slide-up opacity-0 hover:scale-110 hover:text-[#42c6a1] transition-all duration-300">
                 <a href="https://www.linkedin.com/in/jimil-v-soni-3382b42b0/" target="_blank"><Linkedinlogo /></a>
               </li>
