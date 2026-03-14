@@ -32,6 +32,168 @@
   }
 }
 
+/* Hero background gradient animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-gradient-bg {
+  background: linear-gradient(135deg, #0a0f1c 0%, #111827 25%, #0d1f2d 50%, #111827 75%, #0a0f1c 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+/* Floating orbs */
+@keyframes floatOrb {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, -50px) scale(1.1); }
+  50% { transform: translate(-20px, -80px) scale(0.95); }
+  75% { transform: translate(40px, -30px) scale(1.05); }
+}
+
+.floating-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.25;
+  pointer-events: none;
+  animation: floatOrb 20s ease-in-out infinite;
+}
+
+/* Twinkling stars */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.5); }
+}
+
+.star-twinkle {
+  opacity: 0.1;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+/* Diagonal light streaks */
+@keyframes streak {
+  0% { transform: translateX(-100%) rotate(-35deg); opacity: 0; }
+  10% { opacity: 0.3; }
+  90% { opacity: 0.3; }
+  100% { transform: translateX(200vw) rotate(-35deg); opacity: 0; }
+}
+
+.light-streak {
+  position: absolute;
+  left: -20%;
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(66, 198, 161, 0.4), transparent);
+  animation: streak 12s linear infinite;
+  pointer-events: none;
+}
+
+/* Text reveal animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-slide-up {
+  opacity: 0;
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Gradient text animation */
+@keyframes textShimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.text-shimmer {
+  background: linear-gradient(90deg, #fff 0%, #42c6a1 25%, #fff 50%, #42c6a1 75%, #fff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textShimmer 4s linear infinite;
+}
+
+/* Glow line animation */
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.4; width: 0; }
+  50% { opacity: 1; width: 80px; }
+}
+
+.glow-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #42c6a1, transparent);
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* Staggered social links */
+.social-stagger > *:nth-child(1) { animation-delay: 0.6s; }
+.social-stagger > *:nth-child(2) { animation-delay: 0.75s; }
+.social-stagger > *:nth-child(3) { animation-delay: 0.9s; }
+.social-stagger > *:nth-child(4) { animation-delay: 1.05s; }
+.social-stagger > *:nth-child(5) { animation-delay: 1.2s; }
+
+/* Logo float animation */
+@keyframes logoFloat {
+  0%, 100% { transform: translate(-25%, -25%) rotate(0deg); }
+  50% { transform: translate(-25%, -30%) rotate(2deg); }
+}
+
+.logo-float {
+  animation: logoFloat 6s ease-in-out infinite;
+}
+
+/* Scroll indicator */
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+
+.scroll-indicator {
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+/* Tech badge float */
+@keyframes badgeFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.badge-float {
+  animation: badgeFloat 4s ease-in-out infinite;
+}
+
+/* Decorative rotating ring */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin-slow {
+  animation: spinSlow 30s linear infinite;
+}
+
+/* Pulsing dot */
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(66, 198, 161, 0.6); }
+  50% { box-shadow: 0 0 0 6px rgba(66, 198, 161, 0); }
+}
+
+.pulse-dot {
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
 @keyframes fadeInRight {
   0% {
     opacity: 0;

@@ -6,7 +6,7 @@ const LogoImage = () => {
     viewBox="0 0 211 191"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="absolute top-0 left-1/2 transform -translate-y-1/4 -translate-x-1/4 sm:w-[300px] md:w-[350px] lg:w-[400px] xl:w-[450px] 2xl:w-[500px] max-w-full"
+    className="absolute top-0 left-1/2 transform -translate-y-1/4 -translate-x-1/4 sm:w-[300px] md:w-[350px] lg:w-[400px] xl:w-[450px] 2xl:w-[500px] max-w-full logo-float"
   >
     <defs>
       <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">

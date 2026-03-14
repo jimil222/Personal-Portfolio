@@ -61,7 +61,7 @@ const EducationSection = memo(() => {
   return (
     <section
       ref={sectionRef}
-      className="py-16 bg-gradient-to-b from-gray-800 to-gray-900 overflow-hidden relative min-h-screen flex items-center"
+      className="py-16 bg-[#111827] overflow-hidden relative min-h-screen flex items-center"
     >
       <div className="container mx-auto px-4 max-w-4xl">
         <motion.h2

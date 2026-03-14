@@ -107,7 +107,7 @@ const SkillsSection = memo(() => {
   return (
     <section
       ref={sectionRef}
-      className="py-16 bg-gradient-to-b from-gray-900 to-gray-800 overflow-hidden relative min-h-screen"
+      className="py-16 bg-[#111827] overflow-hidden relative min-h-screen"
     >
       <div className="container mx-auto px-4">
 

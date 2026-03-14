@@ -61,7 +61,7 @@ export default function ContactForm() {
   return (
     <motion.div
       ref={divRef}
-      className="w-full min-h-screen bg-gradient-to-b from-gray-800 to-gray-900 flex justify-center px-4 sm:px-6 lg:px-8 overflow-hidden relative h-full"
+      className="w-full min-h-screen bg-[#111827] flex justify-center px-4 sm:px-6 lg:px-8 overflow-hidden relative h-full"
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: 'easeInOut' }}
